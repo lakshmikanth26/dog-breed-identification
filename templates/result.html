@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breed Identification Result - Dog Breed Identifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-dog"></i>
+                <h1>Dog Breed Identifier</h1>
+            </div>
+            <nav class="nav">
+                <a href="{{ url_for('index') }}" class="nav-link">
+                    <i class="fas fa-arrow-left"></i>
+                    Analyze Another Photo
+                </a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <div class="result-section">
+                <div class="result-header">
+                    <i class="fas fa-check-circle success-icon"></i>
+                    <h2>Breed Identified!</h2>
+                    <p class="filename">Analysis of: {{ filename }}</p>
+                </div>
+
+                <div class="result-content">
+                    <!-- Main Prediction -->
+                    <div class="main-prediction">
+                        <div class="breed-name">{{ top_breed }}</div>
+                        <div class="confidence-container">
+                            <div class="confidence-bar">
+                                <div class="confidence-fill" style="width: {{ top_confidence }}%"></div>
+                            </div>
+                            <span class="confidence-text">{{ top_confidence }}% confident</span>
+                        </div>
+                    </div>
+
+                    <!-- All Predictions -->
+                    <div class="all-predictions">
+                        <h3>Top Predictions</h3>
+                        <div class="predictions-list">
+                            {% for breed, confidence in all_predictions %}
+                            <div class="prediction-item {% if loop.first %}primary{% endif %}">
+                                <div class="prediction-info">
+                                    <span class="breed">{{ breed }}</span>
+                                    <span class="confidence">{{ confidence }}%</span>
+                                </div>
+                                <div class="prediction-bar">
+                                    <div class="prediction-fill" style="width: {{ confidence }}%"></div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <!-- Breed Information -->
+                    <div class="breed-info">
+                        <h3>About the {{ top_breed }}</h3>
+                        <div class="breed-details">
+                            <div class="breed-description">
+                                <p>{{ breed_info.description }}</p>
+                            </div>
+                            
+                            <div class="breed-characteristics">
+                                <div class="characteristic">
+                                    <div class="char-label">
+                                        <i class="fas fa-heart"></i>
+                                        Temperament
+                                    </div>
+                                    <div class="char-value">{{ breed_info.temperament }}</div>
+                                </div>
+                                
+                                <div class="characteristic">
+                                    <div class="char-label">
+                                        <i class="fas fa-ruler"></i>
+                                        Size
+                                    </div>
+                                    <div class="char-value">{{ breed_info.size }}</div>
+                                </div>
+                                
+                                <div class="characteristic">
+                                    <div class="char-label">
+                                        <i class="fas fa-globe"></i>
+                                        Origin
+                                    </div>
+                                    <div class="char-value">{{ breed_info.origin }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <a href="{{ url_for('index') }}" class="btn btn-primary">
+                            <i class="fas fa-camera"></i>
+                            Analyze Another Photo
+                        </a>
+                        <button onclick="shareResult()" class="btn btn-secondary">
+                            <i class="fas fa-share"></i>
+                            Share Result
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accuracy Disclaimer -->
+            <div class="disclaimer">
+                <div class="disclaimer-content">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <h4>About This Prediction</h4>
+                        <p>This AI model is trained to identify dog breeds but may not be 100% accurate. Results should be considered as educated guesses, especially for mixed breeds or dogs with similar characteristics to multiple breeds.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips Section -->
+            <div class="tips-section">
+                <h3>Tips for Better Results</h3>
+                <div class="tips-grid">
+                    <div class="tip">
+                        <i class="fas fa-camera"></i>
+                        <div>
+                            <h4>Clear Photos</h4>
+                            <p>Use well-lit, high-resolution images showing the dog clearly</p>
+                        </div>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-eye"></i>
+                        <div>
+                            <h4>Full View</h4>
+                            <p>Include the dog's full body or at least head and shoulders</p>
+                        </div>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-dog"></i>
+                        <div>
+                            <h4>Single Dog</h4>
+                            <p>Photos with one dog work better than multiple dogs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Dog Breed Identifier. Powered by TensorFlow and Flask.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Share functionality
+        function shareResult() {
+            const shareData = {
+                title: 'Dog Breed Identification Result',
+                text: `I identified this dog as a {{ top_breed }} with {{ top_confidence }}% confidence using AI!`,
+                url: window.location.href
+            };
+
+            if (navigator.share) {
+                navigator.share(shareData);
+            } else {
+                // Fallback: copy to clipboard
+                const textToCopy = `${shareData.text} - ${shareData.url}`;
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    showToast('Result copied to clipboard!');
+                }).catch(() => {
+                    showToast('Could not copy to clipboard');
+                });
+            }
+        }
+
+        // Toast notification
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(toast);
+                }, 300);
+            }, 3000);
+        }
+
+        // Animate confidence bars on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const fills = document.querySelectorAll('.confidence-fill, .prediction-fill');
+            fills.forEach((fill, index) => {
+                setTimeout(() => {
+                    fill.style.transition = 'width 1s ease-out';
+                    fill.style.width = fill.style.width; // Trigger animation
+                }, index * 200);
+            });
+        });
+
+        // Add animation classes
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.result-section, .breed-info, .tips-section').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+    <style>
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #333;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-in {
+            animation: slideInUp 0.6s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Flask Web Framework
+Flask>=2.3.0,<3.0.0
+Werkzeug>=2.3.0,<3.0.0
+
+# Image Processing
+Pillow>=10.0.0,<11.0.0
+
+# HTTP requests for AI APIs
+requests>=2.25.0
+
+# Production server
+gunicorn>=21.0.0,<22.0.0

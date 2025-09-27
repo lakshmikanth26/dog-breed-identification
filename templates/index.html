@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Breed Identification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-dog"></i>
+                <h1>Dog Breed Identifier</h1>
+            </div>
+            <p class="subtitle">Upload a photo of a dog and discover its breed using AI</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for category, message in messages %}
+                            <div class="flash-message flash-{{ category }}">
+                                <i class="fas fa-{{ 'exclamation-triangle' if category == 'error' else 'info-circle' if category == 'warning' else 'check-circle' }}"></i>
+                                {{ message }}
+                                <button class="close-flash" onclick="this.parentElement.remove()">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <div class="upload-section">
+                <div class="upload-card">
+                    <div class="upload-header">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h2>Upload Dog Photo</h2>
+                        <p>Choose a clear photo of a dog for breed identification</p>
+                    </div>
+
+                    <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data" class="upload-form">
+                        <div class="file-input-container">
+                            <input type="file" id="file-input" name="file" accept="image/*" required>
+                            <label for="file-input" class="file-input-label">
+                                <div class="file-input-content">
+                                    <i class="fas fa-image"></i>
+                                    <span class="file-input-text">Click to select image or drag and drop</span>
+                                    <span class="file-input-subtext">PNG, JPG, JPEG, GIF, BMP, WebP (max 16MB)</span>
+                                </div>
+                            </label>
+                            <div class="file-preview" id="file-preview" style="display: none;">
+                                <img id="preview-image" src="" alt="Preview">
+                                <div class="file-info">
+                                    <span id="file-name"></span>
+                                    <button type="button" class="remove-file" onclick="removeFile()">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submit-btn" disabled>
+                            <i class="fas fa-search"></i>
+                            Identify Breed
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI-Powered</h3>
+                        <p>Uses advanced deep learning to identify over 120 dog breeds with high accuracy</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Fast Results</h3>
+                        <p>Get instant breed predictions with confidence scores in seconds</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-book"></i>
+                        <h3>Breed Information</h3>
+                        <p>Learn about temperament, size, origin, and characteristics of each breed</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="examples-section">
+                <h3>How it works</h3>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Upload Photo</h4>
+                            <p>Select a clear image of a dog</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>AI Analysis</h4>
+                            <p>Our model analyzes the image</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Get Results</h4>
+                            <p>View breed predictions and information</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Dog Breed Identifier. Powered by TensorFlow and Flask.</p>
+        </footer>
+    </div>
+
+    <script>
+        // File input handling
+        const fileInput = document.getElementById('file-input');
+        const filePreview = document.getElementById('file-preview');
+        const previewImage = document.getElementById('preview-image');
+        const fileName = document.getElementById('file-name');
+        const submitBtn = document.getElementById('submit-btn');
+        const fileInputLabel = document.querySelector('.file-input-label');
+
+        fileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                // Validate file type
+                const validTypes = ['image/png', 'image/jpeg', 'image/jpg', 'image/gif', 'image/bmp', 'image/webp'];
+                if (!validTypes.includes(file.type)) {
+                    alert('Please select a valid image file (PNG, JPG, JPEG, GIF, BMP, WebP)');
+                    return;
+                }
+
+                // Validate file size (16MB)
+                if (file.size > 16 * 1024 * 1024) {
+                    alert('File size must be less than 16MB');
+                    return;
+                }
+
+                // Show preview
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    previewImage.src = e.target.result;
+                    fileName.textContent = file.name;
+                    filePreview.style.display = 'block';
+                    fileInputLabel.style.display = 'none';
+                    submitBtn.disabled = false;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Drag and drop functionality
+        fileInputLabel.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            this.classList.add('drag-over');
+        });
+
+        fileInputLabel.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            this.classList.remove('drag-over');
+        });
+
+        fileInputLabel.addEventListener('drop', function(e) {
+            e.preventDefault();
+            this.classList.remove('drag-over');
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                fileInput.files = files;
+                fileInput.dispatchEvent(new Event('change'));
+            }
+        });
+
+        function removeFile() {
+            fileInput.value = '';
+            filePreview.style.display = 'none';
+            fileInputLabel.style.display = 'flex';
+            submitBtn.disabled = true;
+        }
+
+        // Form submission with loading state
+        document.querySelector('.upload-form').addEventListener('submit', function() {
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Analyzing...';
+            submitBtn.disabled = true;
+        });
+
+        // Auto-hide flash messages
+        setTimeout(function() {
+            const flashMessages = document.querySelectorAll('.flash-message');
+            flashMessages.forEach(function(message) {
+                message.style.opacity = '0';
+                setTimeout(function() {
+                    message.remove();
+                }, 300);
+            });
+        }, 5000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,734 @@
+{
+  "Affenpinscher": {
+    "description": "The Affenpinscher is a small toy breed known for its monkey-like facial expression and terrier-like personality. These confident little dogs are fearless, curious, and often entertaining with their antics.",
+    "temperament": "Confident, famously funny, fearless",
+    "size": "Small (9-11.5 inches, 7-10 pounds)",
+    "origin": "Germany"
+  },
+  "Afghan Hound": {
+    "description": "The Afghan Hound is an elegant sighthound with a flowing coat and dignified demeanor. Originally bred for hunting in the mountains of Afghanistan, they are independent and aloof but devoted to their families.",
+    "temperament": "Independent, sweet, dignified",
+    "size": "Large (25-27 inches, 50-60 pounds)",
+    "origin": "Afghanistan"
+  },
+  "African Hunting Dog": {
+    "description": "Also known as the African Wild Dog, this is not a domestic breed but a wild canine species. They are highly social pack hunters with distinctive mottled coats and large, rounded ears.",
+    "temperament": "Social, intelligent, energetic",
+    "size": "Medium-Large (24-30 inches, 40-80 pounds)",
+    "origin": "Sub-Saharan Africa"
+  },
+  "Airedale": {
+    "description": "The Airedale Terrier is the largest of all terrier breeds, known as the 'King of Terriers.' They are versatile working dogs with a distinctive tan and black coat and a confident, outgoing personality.",
+    "temperament": "Friendly, clever, courageous",
+    "size": "Large (23 inches, 50-70 pounds)",
+    "origin": "England"
+  },
+  "American Staffordshire Terrier": {
+    "description": "The American Staffordshire Terrier is a muscular, stocky breed known for their loyalty and courage. Despite their tough appearance, they are gentle with family members and especially good with children.",
+    "temperament": "Confident, smart, good-natured",
+    "size": "Medium (17-19 inches, 40-70 pounds)",
+    "origin": "United States"
+  },
+  "Appenzeller": {
+    "description": "The Appenzeller Sennenhund is a medium-sized herding dog from Switzerland. They are energetic, intelligent working dogs with a distinctive tricolor coat and a tail that curls over their back.",
+    "temperament": "Reliable, fearless, lively",
+    "size": "Medium (20-22 inches, 48-55 pounds)",
+    "origin": "Switzerland"
+  },
+  "Australian Kelpie": {
+    "description": "The Australian Kelpie is an energetic herding dog bred for working livestock in harsh Australian conditions. They are incredibly intelligent, tireless workers with strong herding instincts.",
+    "temperament": "Eager, energetic, loyal",
+    "size": "Medium (15-20 inches, 25-45 pounds)",
+    "origin": "Australia"
+  },
+  "Australian Shepherd": {
+    "description": "Despite their name, Australian Shepherds were developed in the United States as ranch dogs. They are highly intelligent, energetic herding dogs with striking coat colors and often heterochromatic eyes.",
+    "temperament": "Smart, work-oriented, exuberant",
+    "size": "Medium (18-23 inches, 40-65 pounds)",
+    "origin": "United States"
+  },
+  "Australian Terrier": {
+    "description": "The Australian Terrier is a small, sturdy terrier with a shaggy coat and spirited personality. Originally bred to hunt and kill rodents and snakes, they are courageous despite their small size.",
+    "temperament": "Affectionate, courageous, spirited",
+    "size": "Small (10-11 inches, 12-18 pounds)",
+    "origin": "Australia"
+  },
+  "Basenji": {
+    "description": "The Basenji is known as the 'barkless dog' because they produce unique yodel-like sounds instead of barking. These ancient hunting dogs from Africa are independent, intelligent, and cat-like in their cleanliness.",
+    "temperament": "Independent, smart, poised",
+    "size": "Small-Medium (16-17 inches, 22-24 pounds)",
+    "origin": "Central Africa"
+  },
+  "Basset": {
+    "description": "The Basset Hound is a short-legged scent hound with an exceptional sense of smell. Originally bred for hunting small game, they are gentle, patient dogs with a distinctive appearance and melodious bay.",
+    "temperament": "Charming, patient, low-key",
+    "size": "Medium (up to 15 inches, 40-65 pounds)",
+    "origin": "France"
+  },
+  "Beagle": {
+    "description": "Beagles are compact, medium-sized hounds originally bred for hunting hare. They are friendly, curious, and merry dogs that make excellent family pets due to their gentle nature and moderate size.",
+    "temperament": "Friendly, curious, merry",
+    "size": "Small-Medium (13-15 inches, 20-30 pounds)",
+    "origin": "England"
+  },
+  "Bedlington Terrier": {
+    "description": "The Bedlington Terrier has a distinctive lamb-like appearance with a curly coat and arched back. Originally bred for hunting vermin, they are gentle and mild-mannered but can be fierce when provoked.",
+    "temperament": "Affectionate, spirited, good-tempered",
+    "size": "Medium (15-17.5 inches, 17-23 pounds)",
+    "origin": "England"
+  },
+  "Bernese Mountain Dog": {
+    "description": "The Bernese Mountain Dog is a large, sturdy working dog with a striking tricolor coat. Originally used as farm dogs in Switzerland, they are gentle giants known for their friendly nature and patience with children.",
+    "temperament": "Good-natured, friendly, strong",
+    "size": "Large (25-27.5 inches, 80-115 pounds)",
+    "origin": "Switzerland"
+  },
+  "Black-And-Tan Coonhound": {
+    "description": "The Black and Tan Coonhound is a large scent hound bred for tracking raccoons and other game. They are gentle, adaptable dogs with a distinctive black and tan coat and excellent tracking abilities.",
+    "temperament": "Easygoing, gentle, adaptable",
+    "size": "Large (23-27 inches, 65-110 pounds)",
+    "origin": "United States"
+  },
+  "Blenheim Spaniel": {
+    "description": "The Blenheim Spaniel refers to the Cavalier King Charles Spaniel with the distinctive chestnut and white coat pattern. These toy spaniels are gentle, affectionate, and make excellent companion dogs.",
+    "temperament": "Affectionate, gentle, graceful",
+    "size": "Small (12-13 inches, 13-18 pounds)",
+    "origin": "England"
+  },
+  "Bloodhound": {
+    "description": "The Bloodhound is renowned for having the keenest sense of smell of any dog breed. These large scent hounds are gentle, patient, and noble, originally bred for tracking people and game.",
+    "temperament": "Gentle, patient, noble",
+    "size": "Large (23-27 inches, 80-110 pounds)",
+    "origin": "Belgium/France"
+  },
+  "Bluetick": {
+    "description": "The Bluetick Coonhound is a medium to large-sized scent hound with a distinctive blue-mottled coat. Bred for hunting raccoons and other game, they are friendly, intelligent, and have excellent tracking abilities.",
+    "temperament": "Friendly, intelligent, active",
+    "size": "Medium-Large (21-27 inches, 45-80 pounds)",
+    "origin": "United States"
+  },
+  "Border Collie": {
+    "description": "The Border Collie is widely considered the most intelligent dog breed. Originally bred for herding sheep, they are energetic, athletic, and require mental stimulation to prevent destructive behavior.",
+    "temperament": "Smart, energetic, eager",
+    "size": "Medium (18-22 inches, 30-55 pounds)",
+    "origin": "Scotland/England border"
+  },
+  "Border Terrier": {
+    "description": "The Border Terrier is a small, rough-coated terrier originally bred for fox hunting. They are affectionate, intelligent, and even-tempered, making them excellent family pets while retaining their terrier spirit.",
+    "temperament": "Affectionate, happy, plucky",
+    "size": "Small (11-16 inches, 11.5-15.5 pounds)",
+    "origin": "England/Scotland border"
+  },
+  "Borzoi": {
+    "description": "The Borzoi is an elegant sighthound originally bred by Russian aristocracy for hunting wolves. These tall, graceful dogs are gentle, quiet, and independent, with a silky coat and noble bearing.",
+    "temperament": "Quiet, gentle, independent",
+    "size": "Large (26-32 inches, 60-105 pounds)",
+    "origin": "Russia"
+  },
+  "Boston Bull": {
+    "description": "The Boston Terrier, often called the Boston Bull, is a compact, well-balanced dog with a distinctive tuxedo coat. Known as the 'American Gentleman,' they are intelligent, friendly, and make excellent city dogs.",
+    "temperament": "Friendly, bright, amusing",
+    "size": "Small-Medium (15-17 inches, 12-25 pounds)",
+    "origin": "United States"
+  },
+  "Bouvier Des Flandres": {
+    "description": "The Bouvier des Flandres is a large, powerful herding dog with a thick, tousled coat. Originally bred for farm work in Belgium, they are intelligent, loyal, and protective of their families.",
+    "temperament": "Affectionate, strong-willed, courageous",
+    "size": "Large (23.5-27.5 inches, 70-110 pounds)",
+    "origin": "Belgium"
+  },
+  "Boxer": {
+    "description": "Boxers are medium to large-sized working dogs known for their playful nature and boundless energy. They are excellent family dogs, patient with children, and naturally protective without being aggressive.",
+    "temperament": "Fun-loving, bright, active",
+    "size": "Medium-Large (21.5-25 inches, 50-80 pounds)",
+    "origin": "Germany"
+  },
+  "Brabancon Griffon": {
+    "description": "The Brussels Griffon (Brabancon variety) is a small toy breed with a smooth coat and expressive face. These alert, intelligent dogs are full of self-importance and make charming, if sometimes moody, companions.",
+    "temperament": "Alert, curious, loyal",
+    "size": "Small (7-10 inches, 8-10 pounds)",
+    "origin": "Belgium"
+  },
+  "Briard": {
+    "description": "The Briard is a large French herding dog with a long, wavy coat and distinctive beard and eyebrows. They are confident, smart, and eager to please, making them excellent working dogs and family companions.",
+    "temperament": "Confident, smart, faithful",
+    "size": "Large (22-27 inches, 55-100 pounds)",
+    "origin": "France"
+  },
+  "Brittany Spaniel": {
+    "description": "The Brittany (formerly Brittany Spaniel) is an energetic gun dog bred for pointing and retrieving. They are eager to please, intelligent, and make excellent hunting companions and active family pets.",
+    "temperament": "Bright, eager, athletic",
+    "size": "Medium (17.5-20.5 inches, 30-40 pounds)",
+    "origin": "France"
+  },
+  "Bull Mastiff": {
+    "description": "The Bullmastiff is a large, powerful guardian breed created by crossing Bulldogs with Mastiffs. They are gentle giants with their families but formidable protectors when needed, combining strength with a calm temperament.",
+    "temperament": "Affectionate, loyal, brave",
+    "size": "Large (24-27 inches, 100-130 pounds)",
+    "origin": "England"
+  },
+  "Cairn": {
+    "description": "The Cairn Terrier is a small, hardy terrier originally bred for hunting vermin among the cairns (stone piles) of Scotland. They are cheerful, alert, and busy little dogs with a weather-resistant coat.",
+    "temperament": "Alert, cheerful, busy",
+    "size": "Small (9.5-10 inches, 13-14 pounds)",
+    "origin": "Scotland"
+  },
+  "Cardigan": {
+    "description": "The Cardigan Welsh Corgi is distinguished from the Pembroke by its long tail and slightly larger size. These herding dogs are affectionate, loyal, and intelligent, with a strong work ethic and adaptable nature.",
+    "temperament": "Affectionate, loyal, smart",
+    "size": "Small-Medium (10.5-12.5 inches, 25-38 pounds)",
+    "origin": "Wales"
+  },
+  "Chesapeake Bay Retriever": {
+    "description": "The Chesapeake Bay Retriever is a large water dog bred for retrieving waterfowl in harsh conditions. They have a distinctive wavy coat and are known for their strength, endurance, and love of water.",
+    "temperament": "Bright, sensitive, strong",
+    "size": "Large (21-26 inches, 55-80 pounds)",
+    "origin": "United States"
+  },
+  "Chihuahua": {
+    "description": "The Chihuahua is the world's smallest dog breed but has a larger-than-life personality. These tiny dogs are alert, confident, and often unaware of their small size, making them excellent watchdogs despite their stature.",
+    "temperament": "Charming, graceful, sassy",
+    "size": "Toy (5-8 inches, 2-6 pounds)",
+    "origin": "Mexico"
+  },
+  "Chow": {
+    "description": "The Chow Chow is an ancient breed from China known for its lion-like appearance and blue-black tongue. These dignified, independent dogs are loyal to their families but can be aloof with strangers.",
+    "temperament": "Dignified, bright, serious-minded",
+    "size": "Medium (17-20 inches, 45-70 pounds)",
+    "origin": "China"
+  },
+  "Clumber": {
+    "description": "The Clumber Spaniel is the largest of the spaniel breeds, originally bred for hunting in dense cover. These gentle, dignified dogs are calm and steady, making them excellent family companions with a sweet disposition.",
+    "temperament": "Gentle, loyal, thoughtful",
+    "size": "Large (17-20 inches, 55-85 pounds)",
+    "origin": "England"
+  },
+  "Cocker Spaniel": {
+    "description": "The Cocker Spaniel is a medium-sized sporting dog with a silky coat and gentle expression. Originally bred for hunting woodcock, they are merry, outgoing dogs that make excellent family pets.",
+    "temperament": "Gentle, smart, happy",
+    "size": "Medium (13.5-15.5 inches, 20-30 pounds)",
+    "origin": "England"
+  },
+  "Collie": {
+    "description": "The Collie is an elegant herding dog made famous by Lassie. These intelligent, loyal dogs are excellent with children and have a strong desire to please, making them wonderful family companions.",
+    "temperament": "Devoted, graceful, proud",
+    "size": "Large (22-26 inches, 50-75 pounds)",
+    "origin": "Scotland"
+  },
+  "Curly-Coated Retriever": {
+    "description": "The Curly-Coated Retriever is distinguished by its tight, water-resistant curls. These confident, intelligent dogs are excellent swimmers and retrievers, originally bred for waterfowl hunting.",
+    "temperament": "Confident, proud, wickedly smart",
+    "size": "Large (23-27 inches, 60-95 pounds)",
+    "origin": "England"
+  },
+  "Dandie Dinmont": {
+    "description": "The Dandie Dinmont Terrier is a small Scottish terrier with a distinctive topknot of silky hair. These independent, dignified dogs are calm for terriers but retain their hunting instincts and courage.",
+    "temperament": "Independent, smart, dignified",
+    "size": "Small (8-11 inches, 18-24 pounds)",
+    "origin": "Scotland"
+  },
+  "Dhole": {
+    "description": "The Dhole is a wild canine species from Asia, not a domestic dog breed. Also known as the Asian Wild Dog, they are highly social pack hunters with reddish coats and distinctive vocalizations.",
+    "temperament": "Social, intelligent, athletic",
+    "size": "Medium (17-21 inches, 22-46 pounds)",
+    "origin": "Asia"
+  },
+  "Dingo": {
+    "description": "The Dingo is Australia's wild dog, not a domestic breed. These ancient canines are independent, intelligent, and well-adapted to harsh Australian conditions, with a distinctive tan to ginger coat.",
+    "temperament": "Independent, alert, resourceful",
+    "size": "Medium (20-24 inches, 22-33 pounds)",
+    "origin": "Australia"
+  },
+  "Doberman": {
+    "description": "The Doberman Pinscher is a medium-large breed known for intelligence, loyalty, and fearlessness. Originally bred as guard dogs, they are energetic, alert, and deeply devoted to their families.",
+    "temperament": "Loyal, fearless, alert",
+    "size": "Large (24-28 inches, 60-100 pounds)",
+    "origin": "Germany"
+  },
+  "English Foxhound": {
+    "description": "The English Foxhound is a large scent hound bred for fox hunting. These athletic, gentle dogs have incredible stamina and are known for their melodious bay and pack-oriented nature.",
+    "temperament": "Gentle, sociable, active",
+    "size": "Large (21-25 inches, 60-75 pounds)",
+    "origin": "England"
+  },
+  "English Setter": {
+    "description": "The English Setter is an elegant gun dog with a distinctive feathered coat and gentle expression. These friendly, mellow dogs are excellent family pets and skilled bird hunters with a calm demeanor.",
+    "temperament": "Friendly, mellow, eager to please",
+    "size": "Large (23-27 inches, 45-80 pounds)",
+    "origin": "England"
+  },
+  "English Springer": {
+    "description": "The English Springer Spaniel is an energetic gun dog bred for flushing and retrieving game. These friendly, eager dogs are excellent family pets and working dogs, known for their enthusiasm and intelligence.",
+    "temperament": "Friendly, brainy, eager to please",
+    "size": "Medium (19-20 inches, 40-50 pounds)",
+    "origin": "England"
+  },
+  "Entlebucher": {
+    "description": "The Entlebucher Mountain Dog is the smallest of the Swiss Mountain Dogs. These energetic, intelligent herding dogs are loyal and determined, originally bred for driving cattle in the Swiss Alps.",
+    "temperament": "Friendly, energetic, determined",
+    "size": "Medium (16-21 inches, 40-65 pounds)",
+    "origin": "Switzerland"
+  },
+  "Eskimo Dog": {
+    "description": "The American Eskimo Dog is a spitz-type breed with a fluffy white coat and fox-like face. Despite the name, they're not related to Eskimo culture but are intelligent, alert, and friendly companions.",
+    "temperament": "Playful, perky, smart",
+    "size": "Small-Medium (9-19 inches, 6-35 pounds)",
+    "origin": "United States"
+  },
+  "Flat-Coated Retriever": {
+    "description": "The Flat-Coated Retriever is an athletic gun dog with a sleek, flat coat. Known as the 'Peter Pan' of dogs for their youthful enthusiasm, they are optimistic, friendly, and excellent family dogs.",
+    "temperament": "Optimistic, good-humored, outgoing",
+    "size": "Large (22-24.5 inches, 60-70 pounds)",
+    "origin": "England"
+  },
+  "French Bulldog": {
+    "description": "The French Bulldog is a small companion breed with distinctive 'bat ears' and a muscular build. These adaptable, playful dogs are excellent city pets, known for their quiet nature and affectionate personality.",
+    "temperament": "Adaptable, playful, smart",
+    "size": "Small (11-13 inches, 20-28 pounds)",
+    "origin": "France"
+  },
+  "German Shepherd": {
+    "description": "The German Shepherd is a large herding breed known for versatility, intelligence, and loyalty. These confident, courageous dogs excel in many roles from family pet to police work, and are deeply devoted to their handlers.",
+    "temperament": "Confident, courageous, smart",
+    "size": "Large (22-26 inches, 50-90 pounds)",
+    "origin": "Germany"
+  },
+  "German Short-Haired Pointer": {
+    "description": "The German Shorthaired Pointer is a versatile hunting dog with boundless energy and intelligence. These athletic, friendly dogs are excellent family pets for active households and skilled pointers and retrievers.",
+    "temperament": "Friendly, smart, willing to please",
+    "size": "Medium-Large (21-25 inches, 45-70 pounds)",
+    "origin": "Germany"
+  },
+  "Giant Schnauzer": {
+    "description": "The Giant Schnauzer is the largest of the schnauzer breeds, originally bred for driving cattle and guarding. These intelligent, loyal dogs are powerful and imposing but gentle with their families.",
+    "temperament": "Loyal, alert, trainable",
+    "size": "Large (23.5-27.5 inches, 55-85 pounds)",
+    "origin": "Germany"
+  },
+  "Golden Retriever": {
+    "description": "The Golden Retriever is one of America's most popular breeds, known for their friendly, intelligent, and devoted nature. These medium-large dogs are excellent family pets, therapy dogs, and hunting companions.",
+    "temperament": "Friendly, intelligent, devoted",
+    "size": "Large (21.5-24 inches, 55-75 pounds)",
+    "origin": "Scotland"
+  },
+  "Gordon Setter": {
+    "description": "The Gordon Setter is the largest of the setter breeds, with a distinctive black and tan coat. These loyal, fearless dogs are excellent hunting companions and devoted family pets with a calm, confident demeanor.",
+    "temperament": "Alert, eager, confident",
+    "size": "Large (23-27 inches, 45-80 pounds)",
+    "origin": "Scotland"
+  },
+  "Great Dane": {
+    "description": "The Great Dane is one of the world's tallest dog breeds, known as the 'Apollo of Dogs.' Despite their imposing size, they are gentle giants with friendly, patient, and dependable temperaments.",
+    "temperament": "Friendly, patient, dependable",
+    "size": "Giant (28-32 inches, 110-175 pounds)",
+    "origin": "Germany"
+  },
+  "Great Pyrenees": {
+    "description": "The Great Pyrenees is a large guardian breed with a thick white coat, originally bred to protect sheep from predators. These patient, calm dogs are gentle with their families but formidable guardians when needed.",
+    "temperament": "Patient, calm, strong-willed",
+    "size": "Large (25-32 inches, 85-160 pounds)",
+    "origin": "France/Spain"
+  },
+  "Greater Swiss Mountain Dog": {
+    "description": "The Greater Swiss Mountain Dog is the largest of the Swiss Mountain Dogs, originally bred as a draft dog. These gentle giants are friendly, patient, and reliable, making them excellent family companions.",
+    "temperament": "Friendly, patient, reliable",
+    "size": "Large (23.5-28.5 inches, 85-140 pounds)",
+    "origin": "Switzerland"
+  },
+  "Groenendael": {
+    "description": "The Belgian Sheepdog (Groenendael) is an elegant herding dog with a long black coat. These intelligent, versatile dogs are loyal and protective, excelling in many roles from family pet to police work.",
+    "temperament": "Bright, watchful, serious-minded",
+    "size": "Medium-Large (22-26 inches, 45-75 pounds)",
+    "origin": "Belgium"
+  },
+  "Ibizan Hound": {
+    "description": "The Ibizan Hound is an elegant sighthound with large, erect ears and a graceful build. Originally bred for hunting rabbits, these athletic dogs are calm, gentle, and make excellent family companions.",
+    "temperament": "Even-tempered, loyal, independent",
+    "size": "Large (22.5-27.5 inches, 45-50 pounds)",
+    "origin": "Spain (Balearic Islands)"
+  },
+  "Irish Setter": {
+    "description": "The Irish Setter is known for its stunning mahogany coat and outgoing personality. These energetic, friendly dogs are excellent family pets and skilled bird dogs, requiring plenty of exercise and mental stimulation.",
+    "temperament": "Outgoing, sweet-natured, active",
+    "size": "Large (25-27 inches, 60-70 pounds)",
+    "origin": "Ireland"
+  },
+  "Irish Terrier": {
+    "description": "The Irish Terrier is known as the 'daredevil of dogdom' for their bold, reckless courage. These medium-sized terriers are intelligent, respectful, and make excellent family guardians with proper training.",
+    "temperament": "Bold, dashing, tenderhearted",
+    "size": "Medium (18 inches, 25-27 pounds)",
+    "origin": "Ireland"
+  },
+  "Irish Water Spaniel": {
+    "description": "The Irish Water Spaniel is the largest of the spaniel breeds, with a distinctive curly coat and rat-like tail. These intelligent, energetic dogs are excellent swimmers and retrievers, originally bred for waterfowl hunting.",
+    "temperament": "Alert, inquisitive, hardworking",
+    "size": "Large (21-24 inches, 45-68 pounds)",
+    "origin": "Ireland"
+  },
+  "Irish Wolfhound": {
+    "description": "The Irish Wolfhound is one of the tallest dog breeds, originally bred for hunting wolves. Despite their imposing size, they are gentle giants with calm, dignified temperaments and deep loyalty to their families.",
+    "temperament": "Dignified, eye-catching, serene",
+    "size": "Giant (30-35 inches, 105-180 pounds)",
+    "origin": "Ireland"
+  },
+  "Italian Greyhound": {
+    "description": "The Italian Greyhound is a miniature sighthound with an elegant, graceful build. These sensitive, alert dogs are devoted companions that prefer warmth and comfort, making them excellent lap dogs.",
+    "temperament": "Sensitive, alert, playful",
+    "size": "Small (13-15 inches, 7-14 pounds)",
+    "origin": "Italy"
+  },
+  "Japanese Spaniel": {
+    "description": "The Japanese Chin (formerly Japanese Spaniel) is a toy breed with a distinctive flat face and silky coat. These charming, noble dogs are intelligent and make excellent companions, originally bred for Japanese nobility.",
+    "temperament": "Charming, noble, loving",
+    "size": "Small (8-11 inches, 7-9 pounds)",
+    "origin": "Japan"
+  },
+  "Keeshond": {
+    "description": "The Keeshond is a medium-sized spitz breed with a thick double coat and fox-like expression. These friendly, lively dogs are excellent family pets, known for their outgoing personality and distinctive 'spectacles' markings.",
+    "temperament": "Friendly, lively, outgoing",
+    "size": "Medium (16-19 inches, 35-45 pounds)",
+    "origin": "Netherlands"
+  },
+  "Kelpie": {
+    "description": "The Australian Kelpie is an energetic herding dog bred for working livestock. These intelligent, tireless workers have strong herding instincts and require plenty of mental and physical stimulation to thrive.",
+    "temperament": "Eager, energetic, loyal",
+    "size": "Medium (15-20 inches, 25-45 pounds)",
+    "origin": "Australia"
+  },
+  "Kerry Blue Terrier": {
+    "description": "The Kerry Blue Terrier is known for its distinctive blue-gray coat that changes color as they mature. These spirited, alert dogs are excellent watchdogs and loyal family companions with proper socialization.",
+    "temperament": "Alert, adaptable, people-oriented",
+    "size": "Medium (17.5-19.5 inches, 33-40 pounds)",
+    "origin": "Ireland"
+  },
+  "Komondor": {
+    "description": "The Komondor is a large guardian breed with a distinctive corded coat that resembles a mop. Originally bred to guard livestock, these calm, steady dogs are devoted protectors but require experienced handling.",
+    "temperament": "Steady, fearless, affectionate",
+    "size": "Large (25.5-27.5 inches, 80-130 pounds)",
+    "origin": "Hungary"
+  },
+  "Kuvasz": {
+    "description": "The Kuvasz is a large, white guardian breed originally bred to protect royal families and their livestock. These loyal, fearless dogs are devoted to their families but can be aloof with strangers.",
+    "temperament": "Loyal, fearless, sweet",
+    "size": "Large (26-30 inches, 70-115 pounds)",
+    "origin": "Hungary"
+  },
+  "Labrador Retriever": {
+    "description": "The Labrador Retriever is America's most popular dog breed, known for their friendly, outgoing nature and love of water. These medium-large dogs are excellent family pets, working dogs, and companions.",
+    "temperament": "Friendly, outgoing, active",
+    "size": "Large (21.5-24.5 inches, 55-80 pounds)",
+    "origin": "Newfoundland, Canada"
+  },
+  "Lakeland Terrier": {
+    "description": "The Lakeland Terrier is a small, square-built terrier originally bred for hunting foxes in the Lake District of England. These confident, friendly dogs are bold and determined but make excellent family pets.",
+    "temperament": "Friendly, confident, brave",
+    "size": "Small (13.5-14.5 inches, 15-17 pounds)",
+    "origin": "England"
+  },
+  "Leonberg": {
+    "description": "The Leonberger is a giant breed created to resemble the lion on the town crest of Leonberg, Germany. These gentle giants are friendly, intelligent, and make excellent family companions despite their imposing size.",
+    "temperament": "Friendly, gentle, playful",
+    "size": "Giant (25.5-31.5 inches, 90-170 pounds)",
+    "origin": "Germany"
+  },
+  "Lhasa": {
+    "description": "The Lhasa Apso is a small breed originally bred as sentinel dogs in Tibetan palaces and monasteries. These confident, smart dogs are devoted to their families but can be aloof with strangers, requiring proper socialization.",
+    "temperament": "Confident, smart, comical",
+    "size": "Small (10-11 inches, 12-18 pounds)",
+    "origin": "Tibet"
+  },
+  "Malamute": {
+    "description": "The Alaskan Malamute is a large Arctic sled dog built for strength and endurance. These affectionate, loyal dogs are pack animals that require firm leadership and plenty of exercise to prevent destructive behavior.",
+    "temperament": "Affectionate, loyal, playful",
+    "size": "Large (23-25 inches, 75-85 pounds)",
+    "origin": "Alaska"
+  },
+  "Malinois": {
+    "description": "The Belgian Malinois is a medium-sized herding dog known for intelligence, athleticism, and work drive. These confident, hardworking dogs excel in police and military work but require experienced handlers and plenty of mental stimulation.",
+    "temperament": "Confident, smart, hardworking",
+    "size": "Medium (22-26 inches, 40-80 pounds)",
+    "origin": "Belgium"
+  },
+  "Maltese Dog": {
+    "description": "The Maltese is a toy breed with a silky white coat and gentle manner. These fearless, charming dogs are excellent companions and lap dogs, originally bred for the nobility of ancient civilizations.",
+    "temperament": "Gentle, playful, charming",
+    "size": "Toy (7-9 inches, 4-7 pounds)",
+    "origin": "Malta"
+  },
+  "Mexican Hairless": {
+    "description": "The Xoloitzcuintli (Mexican Hairless Dog) is an ancient breed that comes in toy, miniature, and standard sizes. These calm, loyal dogs are excellent watchdogs and companions, known for their warm skin and healing properties.",
+    "temperament": "Calm, loyal, alert",
+    "size": "Varies (10-23 inches, 10-55 pounds)",
+    "origin": "Mexico"
+  },
+  "Miniature Pinscher": {
+    "description": "The Miniature Pinscher is a small breed known as the 'King of Toys' for their fearless, energetic personality. These proud, fearless dogs are excellent watchdogs despite their small size and make spirited companions.",
+    "temperament": "Fearless, fun-loving, proud",
+    "size": "Small (10-12.5 inches, 8-10 pounds)",
+    "origin": "Germany"
+  },
+  "Miniature Poodle": {
+    "description": "The Miniature Poodle is an intelligent, athletic breed with a hypoallergenic curly coat. These exceptionally smart dogs are excellent family pets, known for their trainability and elegant appearance.",
+    "temperament": "Active, alert, intelligent",
+    "size": "Small (10-15 inches, 10-15 pounds)",
+    "origin": "Germany/France"
+  },
+  "Miniature Schnauzer": {
+    "description": "The Miniature Schnauzer is a small terrier with a distinctive beard and eyebrows. These friendly, smart dogs are excellent family pets and watchdogs, known for their spirited personality and adaptability.",
+    "temperament": "Friendly, smart, obedient",
+    "size": "Small (12-14 inches, 11-20 pounds)",
+    "origin": "Germany"
+  },
+  "Newfoundland": {
+    "description": "The Newfoundland is a giant working breed known for their sweet nature and lifesaving abilities in water. These gentle giants are patient, devoted family dogs with webbed feet and water-resistant coats.",
+    "temperament": "Sweet, patient, devoted",
+    "size": "Giant (26-28 inches, 100-150 pounds)",
+    "origin": "Newfoundland, Canada"
+  },
+  "Norfolk Terrier": {
+    "description": "The Norfolk Terrier is a small, compact terrier with drop ears and a fearless attitude. These alert, gregarious dogs are excellent family pets, originally bred for hunting vermin and small game.",
+    "temperament": "Alert, gregarious, fearless",
+    "size": "Small (9-10 inches, 11-12 pounds)",
+    "origin": "England"
+  },
+  "Norwegian Elkhound": {
+    "description": "The Norwegian Elkhound is a medium-sized spitz breed originally used for hunting elk and other large game. These hardy, reliable dogs are excellent family companions with strong hunting instincts and endurance.",
+    "temperament": "Friendly, reliable, keen",
+    "size": "Medium (19.5-20.5 inches, 48-55 pounds)",
+    "origin": "Norway"
+  },
+  "Norwich Terrier": {
+    "description": "The Norwich Terrier is nearly identical to the Norfolk Terrier but with erect ears. These small, energetic dogs are affectionate, alert, and make excellent family pets with proper exercise and mental stimulation.",
+    "temperament": "Alert, gregarious, hardy",
+    "size": "Small (9-10 inches, 11-12 pounds)",
+    "origin": "England"
+  },
+  "Old English Sheepdog": {
+    "description": "The Old English Sheepdog is a large herding breed with a distinctive shaggy coat that covers their eyes. These intelligent, bubbly dogs are excellent family pets, known for their playful nature and herding instincts.",
+    "temperament": "Adaptable, gentle, intelligent",
+    "size": "Large (21+ inches, 60-100 pounds)",
+    "origin": "England"
+  },
+  "Otterhound": {
+    "description": "The Otterhound is a large scent hound originally bred for hunting otters. These amiable, boisterous dogs have webbed feet and a water-resistant coat, making them excellent swimmers and family companions.",
+    "temperament": "Amiable, boisterous, even-tempered",
+    "size": "Large (24-27 inches, 80-115 pounds)",
+    "origin": "England"
+  },
+  "Papillon": {
+    "description": "The Papillon is a toy spaniel known for their butterfly-like ears and elegant appearance. These alert, friendly dogs are highly intelligent and trainable, making them excellent companions and competitive dogs.",
+    "temperament": "Alert, friendly, happy",
+    "size": "Small (8-11 inches, 5-10 pounds)",
+    "origin": "France/Belgium"
+  },
+  "Pekinese": {
+    "description": "The Pekingese is a toy breed originally bred for Chinese royalty, known for their lion-like appearance and regal bearing. These affectionate, loyal dogs are excellent companions but can be independent and stubborn.",
+    "temperament": "Affectionate, loyal, regal",
+    "size": "Small (6-9 inches, 7-14 pounds)",
+    "origin": "China"
+  },
+  "Pembroke": {
+    "description": "The Pembroke Welsh Corgi is distinguished from the Cardigan by its lack of a tail and smaller size. These affectionate, smart dogs are excellent family pets and herding dogs, known for their short legs and big personalities.",
+    "temperament": "Affectionate, smart, alert",
+    "size": "Small (10-12 inches, 22-30 pounds)",
+    "origin": "Wales"
+  },
+  "Pomeranian": {
+    "description": "The Pomeranian is a toy spitz breed with a fluffy double coat and fox-like face. These inquisitive, bold dogs are excellent companions and watchdogs, often unaware of their small size.",
+    "temperament": "Inquisitive, bold, lively",
+    "size": "Toy (6-7 inches, 3-7 pounds)",
+    "origin": "Germany/Poland"
+  },
+  "Pug": {
+    "description": "The Pug is a toy breed with a wrinkled face and charming personality. These even-tempered, charming dogs are excellent family pets and companions, known for their sense of humor and love of attention.",
+    "temperament": "Even-tempered, charming, mischievous",
+    "size": "Small (10-13 inches, 14-18 pounds)",
+    "origin": "China"
+  },
+  "Redbone": {
+    "description": "The Redbone Coonhound is a medium to large scent hound with a distinctive red coat. These even-tempered, amiable dogs are excellent hunting companions and family pets, known for their melodious bay.",
+    "temperament": "Even-tempered, amiable, eager to please",
+    "size": "Medium-Large (21-27 inches, 45-70 pounds)",
+    "origin": "United States"
+  },
+  "Rhodesian Ridgeback": {
+    "description": "The Rhodesian Ridgeback is a large hound with a distinctive ridge of hair along their back. Originally bred for hunting lions, these dignified, even-tempered dogs are excellent family guardians and companions.",
+    "temperament": "Dignified, even-tempered, reserved",
+    "size": "Large (24-27 inches, 70-85 pounds)",
+    "origin": "Southern Africa"
+  },
+  "Rottweiler": {
+    "description": "The Rottweiler is a large working breed known for strength, loyalty, and confidence. These calm, confident dogs are excellent family guardians and working dogs, requiring proper training and socialization from an early age.",
+    "temperament": "Loyal, loving, confident guardian",
+    "size": "Large (22-27 inches, 80-135 pounds)",
+    "origin": "Germany"
+  },
+  "Saint Bernard": {
+    "description": "The Saint Bernard is a giant working breed famous for Alpine rescues. These patient, charming dogs are gentle giants that make excellent family pets, known for their calm temperament and devotion to children.",
+    "temperament": "Playful, charming, inquisitive",
+    "size": "Giant (26-30 inches, 120-180 pounds)",
+    "origin": "Switzerland"
+  },
+  "Saluki": {
+    "description": "The Saluki is an ancient sighthound breed known for grace, speed, and endurance. These gentle, dignified dogs are independent but devoted to their families, originally bred for hunting gazelle in the desert.",
+    "temperament": "Gentle, dignified, independent",
+    "size": "Large (23-28 inches, 40-65 pounds)",
+    "origin": "Middle East"
+  },
+  "Samoyed": {
+    "description": "The Samoyed is a medium-sized spitz breed with a fluffy white coat and 'Sammy smile.' These gentle, adaptable dogs are excellent family pets, originally bred by the Samoyede people for herding reindeer.",
+    "temperament": "Gentle, adaptable, friendly",
+    "size": "Medium (19-23.5 inches, 35-65 pounds)",
+    "origin": "Siberia"
+  },
+  "Schipperke": {
+    "description": "The Schipperke is a small spitz breed originally bred as a barge dog in Belgium. These confident, alert dogs are excellent watchdogs and companions, known for their fox-like appearance and mischievous nature.",
+    "temperament": "Confident, alert, curious",
+    "size": "Small (10-13 inches, 10-16 pounds)",
+    "origin": "Belgium"
+  },
+  "Scotch Terrier": {
+    "description": "The Scottish Terrier is a small terrier with a distinctive silhouette and independent nature. These confident, independent dogs are excellent family pets for those who appreciate their dignified, sometimes aloof personality.",
+    "temperament": "Confident, independent, spirited",
+    "size": "Small (10 inches, 18-22 pounds)",
+    "origin": "Scotland"
+  },
+  "Scottish Deerhound": {
+    "description": "The Scottish Deerhound is a large sighthound originally bred for hunting red deer. These dignified, gentle dogs are calm and friendly, making them excellent family companions despite their large size.",
+    "temperament": "Dignified, gentle, polite",
+    "size": "Large (28-32 inches, 75-110 pounds)",
+    "origin": "Scotland"
+  },
+  "Sealyham Terrier": {
+    "description": "The Sealyham Terrier is a small Welsh terrier with a distinctive white coat and calm temperament. These alert, outgoing dogs are excellent family pets, originally bred for hunting badgers and otters.",
+    "temperament": "Alert, outgoing, calm",
+    "size": "Small (10.5 inches, 23-24 pounds)",
+    "origin": "Wales"
+  },
+  "Shetland Sheepdog": {
+    "description": "The Shetland Sheepdog is a small herding dog that resembles a miniature Collie. These playful, energetic dogs are excellent family pets and agility competitors, known for their intelligence and eagerness to please.",
+    "temperament": "Playful, energetic, bright",
+    "size": "Small (13-16 inches, 15-25 pounds)",
+    "origin": "Scotland (Shetland Islands)"
+  },
+  "Shih-Tzu": {
+    "description": "The Shih Tzu is a toy breed with a flowing coat and friendly personality. These outgoing, happy dogs are excellent companions and lap dogs, originally bred for Chinese royalty and known for their affectionate nature.",
+    "temperament": "Outgoing, happy, affectionate",
+    "size": "Small (9-10.5 inches, 9-16 pounds)",
+    "origin": "Tibet/China"
+  },
+  "Siberian Husky": {
+    "description": "The Siberian Husky is a medium-sized working dog bred for sledding in harsh Arctic conditions. These outgoing, mischievous dogs are excellent family pets but require plenty of exercise and mental stimulation.",
+    "temperament": "Outgoing, mischievous, loyal",
+    "size": "Medium (20-23.5 inches, 35-60 pounds)",
+    "origin": "Siberia"
+  },
+  "Silky Terrier": {
+    "description": "The Silky Terrier is a small toy terrier with a silky coat and spirited personality. These friendly, responsive dogs are excellent companions and watchdogs, originally developed in Australia from Yorkshire and Australian Terriers.",
+    "temperament": "Friendly, responsive, inquisitive",
+    "size": "Small (9-10 inches, 8-10 pounds)",
+    "origin": "Australia"
+  },
+  "Soft-Coated Wheaten Terrier": {
+    "description": "The Soft Coated Wheaten Terrier is a medium-sized Irish terrier with a silky, wheat-colored coat. These friendly, happy dogs are excellent family pets, known for their steady disposition and moderate exercise needs.",
+    "temperament": "Friendly, happy, deeply devoted",
+    "size": "Medium (17-19 inches, 30-40 pounds)",
+    "origin": "Ireland"
+  },
+  "Staffordshire Bullterrier": {
+    "description": "The Staffordshire Bull Terrier is a medium-sized terrier known for courage, intelligence, and love of children. These reliable, brave dogs are excellent family pets when properly socialized, despite their tough appearance.",
+    "temperament": "Reliable, brave, tenacious",
+    "size": "Medium (14-16 inches, 24-38 pounds)",
+    "origin": "England"
+  },
+  "Standard Poodle": {
+    "description": "The Standard Poodle is the largest variety of poodle, known for intelligence, athleticism, and hypoallergenic coat. These active, proud dogs are excellent family pets and working dogs, highly trainable and versatile.",
+    "temperament": "Active, proud, very smart",
+    "size": "Large (over 15 inches, 45-70 pounds)",
+    "origin": "Germany/France"
+  },
+  "Standard Schnauzer": {
+    "description": "The Standard Schnauzer is a medium-sized working dog with a distinctive beard and eyebrows. These spirited, alert dogs are excellent family guardians and companions, known for their intelligence and versatility.",
+    "temperament": "Spirited, alert, courageous",
+    "size": "Medium (17.5-19.5 inches, 30-45 pounds)",
+    "origin": "Germany"
+  },
+  "Sussex Spaniel": {
+    "description": "The Sussex Spaniel is a medium-sized sporting dog with a distinctive golden liver coat and calm temperament. These cheerful, attractive dogs are excellent family pets, originally bred for hunting in dense cover.",
+    "temperament": "Cheerful, attractive, even-tempered",
+    "size": "Medium (13-15 inches, 35-45 pounds)",
+    "origin": "England"
+  },
+  "Tibetan Mastiff": {
+    "description": "The Tibetan Mastiff is a large guardian breed with a thick coat and independent nature. These aloof, watchful dogs are devoted to their families but require experienced handling due to their strong-willed temperament.",
+    "temperament": "Independent, reserved, intelligent",
+    "size": "Large (24-26 inches, 70-150 pounds)",
+    "origin": "Tibet"
+  },
+  "Tibetan Terrier": {
+    "description": "The Tibetan Terrier is a medium-sized breed with a shaggy coat and compact build. Despite the name, they're not true terriers but were bred as companions and good luck charms in Tibetan monasteries.",
+    "temperament": "Affectionate, sensitive, clever",
+    "size": "Medium (14-17 inches, 18-30 pounds)",
+    "origin": "Tibet"
+  },
+  "Toy Poodle": {
+    "description": "The Toy Poodle is the smallest variety of poodle, combining intelligence with a compact size. These active, alert dogs are excellent companions and apartment pets, known for their trainability and hypoallergenic coat.",
+    "temperament": "Active, alert, intelligent",
+    "size": "Toy (up to 10 inches, 4-6 pounds)",
+    "origin": "Germany/France"
+  },
+  "Toy Terrier": {
+    "description": "The Toy Fox Terrier is a small terrier with a big personality in a tiny package. These friendly, alert dogs are excellent companions and watchdogs, combining terrier spirit with toy breed size.",
+    "temperament": "Friendly, alert, spirited",
+    "size": "Toy (8.5-11.5 inches, 3.5-7 pounds)",
+    "origin": "United States"
+  },
+  "Vizsla": {
+    "description": "The Vizsla is a medium-sized sporting dog with a distinctive rust-colored coat and gentle manner. These affectionate, energetic dogs are excellent family pets and hunting companions, known for their velcro-like attachment to their owners.",
+    "temperament": "Affectionate, gentle, energetic",
+    "size": "Medium (21-24 inches, 44-60 pounds)",
+    "origin": "Hungary"
+  },
+  "Walker Hound": {
+    "description": "The Treeing Walker Coonhound is a medium to large scent hound bred for hunting raccoons and other game. These smart, confident dogs are excellent hunting companions and family pets, known for their melodious bay.",
+    "temperament": "Smart, confident, sociable",
+    "size": "Medium-Large (20-27 inches, 45-70 pounds)",
+    "origin": "United States"
+  },
+  "Weimaraner": {
+    "description": "The Weimaraner is a large gun dog with a distinctive gray coat and striking eyes. These friendly, fearless dogs are excellent family pets for active households, originally bred for hunting large game in Germany.",
+    "temperament": "Friendly, fearless, alert",
+    "size": "Large (23-27 inches, 55-90 pounds)",
+    "origin": "Germany"
+  },
+  "Welsh Springer Spaniel": {
+    "description": "The Welsh Springer Spaniel is a medium-sized gun dog with a distinctive red and white coat. These loyal, affectionate dogs are excellent family pets and hunting companions, known for their gentle nature and enthusiasm.",
+    "temperament": "Loyal, affectionate, even-tempered",
+    "size": "Medium (17-19 inches, 35-55 pounds)",
+    "origin": "Wales"
+  },
+  "West Highland White Terrier": {
+    "description": "The West Highland White Terrier is a small Scottish terrier with a bright white coat and confident personality. These loyal, happy dogs are excellent family pets, known for their sturdy build and friendly nature.",
+    "temperament": "Loyal, happy, entertaining",
+    "size": "Small (10-11 inches, 15-20 pounds)",
+    "origin": "Scotland"
+  },
+  "Whippet": {
+    "description": "The Whippet is a medium-sized sighthound known for speed and grace. These gentle, affectionate dogs are excellent family pets and apartment dogs, content to be couch potatoes when not running at high speeds.",
+    "temperament": "Gentle, affectionate, calm",
+    "size": "Medium (18-22 inches, 25-40 pounds)",
+    "origin": "England"
+  },
+  "Wire-Haired Fox Terrier": {
+    "description": "The Wire Fox Terrier is a small terrier with a distinctive wiry coat and alert expression. These friendly, keen dogs are excellent family pets and show dogs, known for their intelligence and spirited personality.",
+    "temperament": "Alert, keen, quick of movement",
+    "size": "Small (up to 15.5 inches, 16-18 pounds)",
+    "origin": "England"
+  },
+  "Yorkshire Terrier": {
+    "description": "The Yorkshire Terrier is a toy breed with a silky coat and big personality. These affectionate, sprightly dogs are excellent companions and apartment pets, often unaware of their small size and ready to take on much larger dogs.",
+    "temperament": "Affectionate, sprightly, tomboyish",
+    "size": "Toy (7-8 inches, 4-7 pounds)",
+    "origin": "England"
+  }
+}
