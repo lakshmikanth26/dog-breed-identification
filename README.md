@@ -1,10 +1,10 @@
 # 🐕 Dog Breed Identification App
 
-A clean and simple Flask web application that identifies dog breeds using Google's Gemini AI.
+A clean and simple Flask web application that identifies dog breeds using a Keras deep learning model.
 
 ## ✨ Features
 
-- **🤖 Powered by Gemini AI**: Highly accurate dog breed identification
+- **🤖 Powered by Keras**: Deep learning model for dog breed identification
 - **🎯 Simple & Clean**: Minimal codebase, easy to understand
 - **📱 Modern UI**: Beautiful, responsive web interface
 - **🔍 Smart Detection**: Accurately identifies if image contains a dog
@@ -22,19 +22,14 @@ cd dog-breed-identification
 python setup.py
 ```
 
-### 2. Get Gemini API Key
-1. Go to: https://aistudio.google.com/app/apikey
-2. Sign in with Google account
-3. Click "Create API Key"
-4. Copy the API key
+### 2. Add Your Trained Model (Optional for Development)
+Place your trained Keras model in the `model/` directory:
+- `model/dog_breed_model.h5` - Your trained Keras model
+- `model/labels.txt` - Breed labels (one per line)
 
-### 3. Configure API Key
-```bash
-# Edit the .env file (created by setup)
-# Change: GEMINI_API_KEY=your_gemini_api_key_here
-```
+**Note**: For development/testing, the app will use a dummy model if no trained model is present.
 
-### 4. Start the App
+### 3. Start the App
 ```bash
 # Activate virtual environment
 source venv/bin/activate  # macOS/Linux
@@ -48,7 +43,7 @@ python app.py
 python start_dev.py
 ```
 
-### 5. Use the App
+### 4. Use the App
 1. Open: http://localhost:5000
 2. Upload a dog image
 3. Get accurate breed identification!
@@ -58,11 +53,14 @@ python start_dev.py
 ```
 dog-breed-identification/
 ├── app.py              # Main Flask application
-├── model.py           # Simple Gemini AI wrapper  
-├── gemini_model.py    # Gemini AI implementation
+├── model.py           # Keras model wrapper  
+├── model/             # Model files directory
+│   ├── dog_breed_model.h5  # Your trained model (add this)
+│   ├── labels.txt          # Breed labels (add this)
+│   └── README.md           # Model setup instructions
 ├── breed_info.json   # Breed descriptions database
-├── requirements.txt  # Dependencies (minimal)
-├── setup.py         # One simple setup script
+├── requirements.txt  # Dependencies
+├── setup.py         # Setup script
 ├── start_dev.py     # Development mode
 ├── env.example      # Environment variables template
 ├── .env            # Your environment variables (created by setup)
@@ -73,48 +71,38 @@ dog-breed-identification/
 
 ## 🔧 Dependencies
 
-**Minimal and clean:**
+**Core dependencies:**
 - Flask (web framework)
 - Pillow (image processing)
-- google-generativeai (Gemini AI)
-- requests (HTTP requests)
-
-**No heavy ML libraries needed!** (No TensorFlow, PyTorch, etc.)
+- TensorFlow/Keras (deep learning)
+- NumPy (numerical processing)
+- Gunicorn (production server)
 
 ## 💡 How It Works
 
 1. **Upload**: User uploads dog image via web interface
-2. **Gemini AI**: Image sent to Google's Gemini AI for analysis
-3. **Analysis**: Gemini identifies breed with reasoning
+2. **Preprocessing**: Image is resized and normalized for the model
+3. **Prediction**: Keras model identifies the breed
 4. **Results**: App displays breed name, confidence, and description
-5. **Fallback**: If Gemini fails, app provides basic functionality
+5. **Development**: Uses dummy model if trained model not present
 
 ## 🎯 Benefits
 
-### Why This Approach?
-- **🎯 Higher Accuracy**: Gemini AI is much more accurate than custom models
-- **🚀 No Training**: No need to train or maintain ML models
-- **💾 Lightweight**: Minimal dependencies and codebase
-- **🔄 Always Updated**: Gemini AI continuously improves
-- **💰 Cost Effective**: Generous free tier (1,500 requests/day)
-
-### vs Traditional ML Approaches
-| Feature | This App | Traditional ML |
-|---------|----------|----------------|
-| Accuracy | 90%+ | 60-80% |
-| Setup Time | 5 minutes | Hours/Days |
-| Model Size | 0 MB | 100+ MB |
-| Dependencies | 4 packages | 20+ packages |
-| Maintenance | None | Ongoing |
+### Why Keras?
+- **🎯 Customizable**: Train on your own dataset for specific needs
+- **🚀 Fast Inference**: Local predictions with no API calls
+- **💾 Offline Capable**: Works without internet connection
+- **🔒 Privacy**: Images never leave your server
+- **💰 No API Costs**: Completely free to run
 
 ## 🛠️ Configuration
 
 ### Environment Variables
 ```bash
-GEMINI_API_KEY=your_api_key_here    # Required for Gemini AI
 FLASK_ENV=development               # Optional: development mode
 SKIP_DOG_CHECK=true                # Optional: disable dog detection
 PORT=5000                          # Optional: custom port
+SECRET_KEY=your_secret_key         # Optional: custom secret key
 ```
 
 ### Development Mode
@@ -122,6 +110,15 @@ PORT=5000                          # Optional: custom port
 # Start with dog detection disabled (for testing any images)
 python start_dev.py
 ```
+
+### Adding Your Trained Model
+
+1. Train your Keras model with dog breed dataset
+2. Save model as `model/dog_breed_model.h5`
+3. Create `model/labels.txt` with breed names (one per line)
+4. Restart the app
+
+See `model/README.md` for detailed instructions.
 
 ## 🔒 Security
 
@@ -161,23 +158,23 @@ Ready for deployment on:
 
 ## 💰 Costs
 
-**Gemini AI Pricing:**
-- Free tier: 1,500 requests/day
-- Paid tier: ~$0.001 per image
-- Very affordable for most use cases
+**Completely Free:**
+- No API costs
+- No usage limits
+- Only hosting costs if deploying to cloud
 
 ## 🆘 Troubleshooting
 
 ### Common Issues
 
-**"API key not found"**
-```bash
-export GEMINI_API_KEY="your_key_here"
-```
+**"Model file not found"**
+- Using dummy model for development
+- Add your trained model to `model/` directory
+- See `model/README.md` for instructions
 
-**"Gemini not available"**
+**"TensorFlow not installed"**
 ```bash
-pip install google-generativeai
+pip install -r requirements.txt
 ```
 
 **Port already in use**
@@ -186,13 +183,13 @@ pip install google-generativeai
 
 ### Getting Help
 1. Check logs in terminal
-2. Run: `python test_gemini.py`
-3. Verify API key: `python setup_gemini.py`
+2. Verify dependencies are installed
+3. Check model files in `model/` directory
 
 ## 🎉 That's It!
 
-You now have a professional dog breed identification app powered by Google's Gemini AI with minimal code and maximum accuracy! 🐕✨
+You now have a professional dog breed identification app powered by Keras deep learning! 🐕✨
 
 ---
 
-**Made with ❤️ using Google Gemini AI**
+**Made with ❤️ using TensorFlow/Keras**

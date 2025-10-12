@@ -38,7 +38,7 @@ app.secret_key = os.environ.get('SECRET_KEY', 'your-secret-key-change-in-product
 
 # Configuration
 UPLOAD_FOLDER = 'uploads'
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'bmp', 'webp'}
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'bmp', 'webp', 'pjpeg', 'jfif'}
 MAX_FILE_SIZE = 16 * 1024 * 1024  # 16MB max file size
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -148,15 +148,35 @@ def predict():
         logger.info(f"File saved: {filepath}")
         
         # Check if image likely contains a dog (skip in development mode)
-        skip_dog_check = os.environ.get('SKIP_DOG_CHECK', 'false').lower() == 'true'
+        # Note: Disabled by default for custom models with specific breeds
+        skip_dog_check = os.environ.get('SKIP_DOG_CHECK', 'true').lower() == 'true'
         
-        if not skip_dog_check and not is_likely_dog(filepath):
-            os.remove(filepath)  # Clean up
-            flash('This image does not appear to contain a dog. Please upload a clear image of a dog.', 'warning')
-            return redirect(url_for('index'))
+        print(f"\n{'='*60}")
+        print(f"🔍 PREDICTION DEBUG INFO")
+        print(f"{'='*60}")
+        print(f"File: {filename}")
+        print(f"SKIP_DOG_CHECK env: {os.environ.get('SKIP_DOG_CHECK', 'NOT SET')}")
+        print(f"skip_dog_check value: {skip_dog_check}")
+        print(f"Will perform dog check? {not skip_dog_check}")
+        
+        if not skip_dog_check:
+            print(f"⚠️  Running dog detection check...")
+            is_dog = is_likely_dog(filepath, threshold=0.05)
+            print(f"Dog detection result: {is_dog}")
+            if not is_dog:
+                print(f"❌ FAILED dog check - rejecting image")
+                os.remove(filepath)  # Clean up
+                flash('This image does not appear to contain a dog. Please upload a clear image of a dog.', 'warning')
+                return redirect(url_for('index'))
+            print(f"✅ PASSED dog check")
+        else:
+            print(f"✅ Dog check SKIPPED (disabled)")
         
         # Get predictions
+        print(f"Getting predictions...")
         top_predictions = get_top_predictions(filepath, top_k=3)
+        print(f"Top predictions: {top_predictions}")
+        print(f"{'='*60}\n")
         
         # Get the top prediction
         top_breed, top_confidence = top_predictions[0]
@@ -214,9 +234,10 @@ def api_predict():
         
         try:
             # Check if image likely contains a dog (skip in development mode)
-            skip_dog_check = os.environ.get('SKIP_DOG_CHECK', 'false').lower() == 'true'
+            # Note: Disabled by default for custom models with specific breeds
+            skip_dog_check = os.environ.get('SKIP_DOG_CHECK', 'true').lower() == 'true'
             
-            if not skip_dog_check and not is_likely_dog(filepath):
+            if not skip_dog_check and not is_likely_dog(filepath, threshold=0.05):
                 return jsonify({'error': 'Image does not appear to contain a dog'}), 400
             
             # Get predictions
@@ -296,39 +317,29 @@ def is_port_in_use(port):
         return True
 
 if __name__ == '__main__':
-    # Check available free AI APIs
+    # Load Keras model
+    print("\n" + "="*60)
+    print("🐕 DOG BREED IDENTIFICATION APP")
+    print("="*60)
     try:
-        from free_ai_model import test_free_apis
-        available_apis = test_free_apis()
-        
-        print("🤖 Available AI APIs:")
-        if available_apis['huggingface']:
-            print("✅ Hugging Face Inference API (FREE - Recommended)")
-        else:
-            print("❌ Hugging Face: No token provided")
-            print("   Get free token: https://huggingface.co/settings/tokens")
-        
-        if available_apis['deepai']:
-            print("✅ DeepAI API")
-        else:
-            print("❌ DeepAI: No API key provided")
-            print("   Get free key: https://deepai.org/")
-        
-        print("✅ Free Vision API (Always available)")
-        print("✅ Local Fallback (Always available)")
-        
-        if not available_apis['huggingface'] and not available_apis['deepai']:
-            print("\n💡 For best results, get a free Hugging Face token!")
-            print("   It's completely free and much more accurate.")
-        
-        logger.info("Free AI APIs check completed")
-        
+        from model import load_model
+        model, labels = load_model()
+        print(f"🤖 Model loaded: {len(labels)} dog breeds")
+        print(f"📋 Breeds: {labels}")
+        logger.info("Keras model loaded successfully")
     except Exception as e:
-        logger.warning(f"Could not check free APIs: {e}")
-        print("⚠️  Using basic functionality")
+        logger.warning(f"Could not load model: {e}")
+        print("⚠️  Using dummy model for development")
     
-    # Determine port to use
-    preferred_port = int(os.environ.get('PORT', 5000))
+    # Show environment configuration
+    print(f"\n🔧 Configuration:")
+    print(f"   SKIP_DOG_CHECK: {os.environ.get('SKIP_DOG_CHECK', 'NOT SET (defaults to true)')}")
+    print(f"   FLASK_ENV: {os.environ.get('FLASK_ENV', 'NOT SET')}")
+    print(f"   PORT: {os.environ.get('PORT', '5001 (default)')}")
+    print("="*60 + "\n")
+    
+    # Determine port to use - fixed to 5001 to avoid conflicts
+    preferred_port = int(os.environ.get('PORT', 5001))
     debug = os.environ.get('FLASK_ENV') == 'development'
     
     # Check if preferred port is available
@@ -347,10 +358,10 @@ if __name__ == '__main__':
     
     # Run the app
     try:
-        print(f"\n🚀 Starting Dog Breed Identification App")
+        print("\n🚀 Starting Dog Breed Identification App")
         print(f"📍 Server running on: http://localhost:{port}")
         print(f"🔧 Debug mode: {'ON' if debug else 'OFF'}")
-        print(f"⏹️  Press Ctrl+C to stop the server\n")
+        print("⏹️  Press Ctrl+C to stop the server\n")
         
         app.run(host='0.0.0.0', port=port, debug=debug)
     except OSError as e:
@@ -359,10 +370,10 @@ if __name__ == '__main__':
             try:
                 alternative_port = find_free_port(port + 1)
                 logger.info(f"Found alternative port: {alternative_port}")
-                print(f"\n🚀 Starting Dog Breed Identification App")
+                print("\n🚀 Starting Dog Breed Identification App")
                 print(f"📍 Server running on: http://localhost:{alternative_port}")
                 print(f"🔧 Debug mode: {'ON' if debug else 'OFF'}")
-                print(f"⏹️  Press Ctrl+C to stop the server\n")
+                print("⏹️  Press Ctrl+C to stop the server\n")
                 app.run(host='0.0.0.0', port=alternative_port, debug=debug)
             except RuntimeError:
                 logger.error("Could not find any free port. Please check your system.")

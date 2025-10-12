@@ -1,12 +1,19 @@
 # Flask Web Framework
-Flask>=2.3.0,<3.0.0
-Werkzeug>=2.3.0,<3.0.0
+Flask>=3.0.0
+Werkzeug>=3.0.0
 
 # Image Processing
-Pillow>=10.0.0,<11.0.0
+Pillow>=10.0.0
+opencv-python>=4.9.0
 
-# HTTP requests for AI APIs
-requests>=2.25.0
+# Machine Learning - Teachable Machine Compatible Versions
+# IMPORTANT: Teachable Machine models require these EXACT versions
+# Python 3.9-3.11 only (not 3.12+)
+tensorflow-macos==2.13.0; platform_system == "Darwin" and platform_machine == "arm64"
+tensorflow==2.13.0; platform_system != "Darwin" or platform_machine != "arm64"
+keras==2.13.1
+numpy>=1.24.0,<2.0.0
+protobuf==3.20.3
 
 # Production server
-gunicorn>=21.0.0,<22.0.0
+gunicorn>=22.0.0
